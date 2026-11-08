@@ -1,50 +1,64 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report
+- Version change: unversioned template -> 1.0.0
+- Modified principles: none (initial adoption)
+- Added sections: Core Principles; Product Constraints; Development Workflow; Governance
+- Removed sections: none
+- Follow-up TODOs: TODO(RATIFICATION_DATE): Record the date this constitution is formally adopted.
+-->
+# TODO App Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. User-Centered Task Management
+Every feature MUST make a learner's TODO workflow clearer: creating, viewing, completing, and
+removing tasks must have an explicit and observable outcome. User-facing behavior MUST state what
+changed and preserve task data for the duration promised by the feature. This keeps practice work
+focused on a usable application rather than incidental technical demonstrations.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Accessible Web-First Experience
+All client functionality MUST be usable with keyboard navigation and expose meaningful labels,
+focus states, and status changes to assistive technologies. Layouts MUST remain usable on narrow
+and wide viewports without hiding essential task actions. Accessibility is a core quality
+requirement for web-client practice, not a later enhancement.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Testable Behavior
+New or changed task behavior MUST have focused automated coverage at the lowest meaningful level,
+including success, invalid input, and state-transition cases where applicable. Tests MUST verify
+observable user behavior rather than implementation details. This gives learners fast confidence
+while allowing implementation techniques to evolve.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Explicit State and Error Handling
+Client state, loading states, and user-recoverable failures MUST be represented explicitly in the
+interface. The application MUST NOT silently discard user input or report a failed action as
+successful. Clear state boundaries make client-side behavior understandable and debuggable.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Deliberate Simplicity
+Implementations MUST use the smallest design that satisfies a documented requirement. New
+dependencies, abstractions, and persistence or network layers require a concrete use case and a
+brief justification in the relevant plan or review. Keeping scope small maximizes the learning
+value of each change.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Product Constraints
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+The product is a web-client coding-practice TODO application. Features MUST prioritize the core
+task workflow before optional enhancements. The client MUST avoid collecting sensitive personal
+data unless a feature specification explicitly defines its purpose, handling, and retention.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Each user-visible change MUST begin with a feature specification and an implementation plan before
+code is written. Pull requests or equivalent reviews MUST verify that requirements, accessibility,
+and applicable automated tests comply with this constitution. Changes that alter persisted task
+data or user-visible behavior MUST document migration, compatibility, or rollback handling.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes conflicting development practices for this project. Amendments MUST
+document the affected principles, rationale, version change, and any required migration work.
+Constitution versions use semantic versioning: MAJOR for incompatible principle removals or
+redefinitions, MINOR for added or materially expanded governance, and PATCH for clarifications
+that preserve governance meaning. Every feature plan and review MUST include a compliance check;
+unresolved exceptions require explicit approval and a time-bounded follow-up.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): Record the formal adoption date. | **Last Amended**: 2026-11-08
