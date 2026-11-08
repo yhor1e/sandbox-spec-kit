@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <h1>My Tasks</h1>
+
+      <form id="task-form" novalidate>
+        <label for="task-input">New task</label>
+        <div class="task-entry">
+          <input id="task-input" name="task" type="text" autocomplete="off">
+          <button type="submit">Add task</button>
+        </div>
+        <p id="validation-message" class="message" role="alert"></p>
+      </form>
+
+      <p id="persistence-warning" class="message warning" role="alert" hidden></p>
+      <p id="status-message" class="visually-hidden" role="status"></p>
+
+      <p id="empty-state">No tasks yet. Add one above.</p>
+      <ul id="task-list" aria-label="Task list"></ul>
+    </main>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>

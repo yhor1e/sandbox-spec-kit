@@ -14,9 +14,9 @@ story's test before its implementation and confirm it fails first.
 
 **Purpose**: Initialize the dependency-free static application and browser-test tooling.
 
-- [ ] T001 [P] Create `package.json` with static-server and `test:e2e` scripts and the Playwright
+- [X] T001 [P] Create `package.json` with static-server and `test:e2e` scripts and the Playwright
   development dependency.
-- [ ] T002 [P] Create `.gitignore` for Node.js dependencies, Playwright output, and local test
+- [X] T002 [P] Create `.gitignore` for Node.js dependencies, Playwright output, and local test
   artifacts.
 
 ---
@@ -27,16 +27,16 @@ story's test before its implementation and confirm it fails first.
 
 **⚠️ CRITICAL**: Complete this phase before starting a user-story phase.
 
-- [ ] T003 [P] Create the semantic application shell, labelled task form, empty-state container,
+- [X] T003 [P] Create the semantic application shell, labelled task form, empty-state container,
   task-list container, and persistent status region in `index.html`.
-- [ ] T004 [P] Define task creation and state-transition helpers in `src/todo.js`, enforcing
+- [X] T004 [P] Define task creation and state-transition helpers in `src/todo.js`, enforcing
   `text` as "Required after trimming; cannot be empty or whitespace-only", `completed` as
   "Required boolean; defaults to `false`", and a unique generated `id`.
-- [ ] T005 [P] Implement versioned browser-local task-list loading and saving in `src/storage.js`,
+- [X] T005 [P] Implement versioned browser-local task-list loading and saving in `src/storage.js`,
   including unavailable storage, invalid data, and write-failure result states.
-- [ ] T006 [P] Create base responsive layout, visible keyboard focus, non-color completion
+- [X] T006 [P] Create base responsive layout, visible keyboard focus, non-color completion
   indicators, status, validation, and persistence-warning styles in `src/styles.css`.
-- [ ] T007 Coordinate initial loading, empty-state rendering, status announcements, and
+- [X] T007 Coordinate initial loading, empty-state rendering, status announcements, and
   recoverable storage-error display in `src/app.js` using `src/todo.js` and `src/storage.js`.
 
 **Checkpoint**: A usable empty application shell and shared failure-handling behavior are ready.
@@ -50,12 +50,12 @@ story's test before its implementation and confirm it fails first.
 **Independent Test**: Add a valid task, observe it as incomplete, reload, and confirm it remains;
 submit whitespace-only input and confirm feedback appears without adding a task.
 
-- [ ] T008 [US1] Write failing add-task, invalid-input, status-announcement, and reload-persistence
+- [X] T008 [US1] Write failing add-task, invalid-input, status-announcement, and reload-persistence
   scenarios in `tests/e2e/todo.spec.js`.
-- [ ] T009 [US1] Implement form submission, trimmed-text validation, incomplete task creation,
+- [X] T009 [US1] Implement form submission, trimmed-text validation, incomplete task creation,
   visible feedback, status messaging, and persistence results in `src/app.js`.
-- [ ] T010 [US1] Refine add-form and validation-feedback presentation in `src/styles.css`.
-- [ ] T011 [US1] Make the User Story 1 scenarios pass in `tests/e2e/todo.spec.js`.
+- [X] T010 [US1] Refine add-form and validation-feedback presentation in `src/styles.css`.
+- [X] T011 [US1] Make the User Story 1 scenarios pass in `tests/e2e/todo.spec.js`.
 
 **Checkpoint**: A user can independently add and retain a task, with invalid input handled clearly.
 
@@ -68,11 +68,11 @@ submit whitespace-only input and confirm feedback appears without adding a task.
 **Independent Test**: Seed or add a task, use the task's keyboard-operable completion control,
 observe the visible state change, reload, and confirm the changed state remains.
 
-- [ ] T012 [US2] Write failing completion, restoration, keyboard-operation, status-announcement,
+- [X] T012 [US2] Write failing completion, restoration, keyboard-operation, status-announcement,
   and reload-persistence scenarios in `tests/e2e/todo.spec.js`.
-- [ ] T013 [US2] Implement labelled native completion controls, complete/restore transitions,
+- [X] T013 [US2] Implement labelled native completion controls, complete/restore transitions,
   non-color state cues, status messages, and persistence results in `src/app.js`.
-- [ ] T014 [US2] Make the User Story 2 scenarios pass in `tests/e2e/todo.spec.js`.
+- [X] T014 [US2] Make the User Story 2 scenarios pass in `tests/e2e/todo.spec.js`.
 
 **Checkpoint**: A user can independently distinguish, complete, restore, and retain task state.
 
@@ -85,12 +85,12 @@ observe the visible state change, reload, and confirm the changed state remains.
 **Independent Test**: Seed or add a task, delete it with its labelled control, confirm it vanishes
 without a confirmation step, reload, and confirm it does not return.
 
-- [ ] T015 [US3] Write failing immediate-deletion, keyboard-focus, status-announcement, and
+- [X] T015 [US3] Write failing immediate-deletion, keyboard-focus, status-announcement, and
   reload-persistence scenarios in `tests/e2e/todo.spec.js`.
-- [ ] T016 [US3] Implement labelled immediate deletion, persistence results, deletion status
+- [X] T016 [US3] Implement labelled immediate deletion, persistence results, deletion status
   messaging, and focus movement to the next control, previous control, or task input in
   `src/app.js`.
-- [ ] T017 [US3] Make the User Story 3 scenarios pass in `tests/e2e/todo.spec.js`.
+- [X] T017 [US3] Make the User Story 3 scenarios pass in `tests/e2e/todo.spec.js`.
 
 **Checkpoint**: A user can independently remove a task immediately and continue keyboard operation
 from a useful focus target.
@@ -101,13 +101,13 @@ from a useful focus target.
 
 **Purpose**: Validate recovery behavior and full feature compliance without changing scope.
 
-- [ ] T018 Add corrupt-data, unavailable-storage, and failed-save in-memory-continuity scenarios
+- [X] T018 Add corrupt-data, unavailable-storage, and failed-save in-memory-continuity scenarios
   to `tests/e2e/todo.spec.js`.
-- [ ] T019 Implement any recovery-path handling needed by the new scenarios in `src/storage.js`.
-- [ ] T020 Refine responsive narrow/wide layouts and persistence-warning visibility in
+- [X] T019 Implement any recovery-path handling needed by the new scenarios in `src/storage.js`.
+- [X] T020 Refine responsive narrow/wide layouts and persistence-warning visibility in
   `src/styles.css`.
-- [ ] T021 Run all end-to-end scenarios and resolve regressions in `tests/e2e/todo.spec.js`.
-- [ ] T022 Validate every quickstart workflow and record any documentation corrections in
+- [X] T021 Run all end-to-end scenarios and resolve regressions in `tests/e2e/todo.spec.js`.
+- [X] T022 Validate every quickstart workflow and record any documentation corrections in
   `specs/001-manage-todo-tasks/quickstart.md`.
 
 ---
