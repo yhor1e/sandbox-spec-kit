@@ -15,72 +15,72 @@ quality. It does not mean implementation work is complete.
 
 ## Requirement Completeness
 
-- [ ] CHK001 Are requirements specified for every user-facing state after adding, completing,
+- [x] CHK001 Are requirements specified for every user-facing state after adding, completing,
   restoring, and deleting a task? [Completeness, Spec §User Stories 1-3]
-- [ ] CHK002 Are the required feedback contents defined for invalid descriptions and persistence
+- [x] CHK002 Are the required feedback contents defined for invalid descriptions and persistence
   failures, rather than only requiring "clear" feedback? [Clarity, Spec §FR-006, FR-008]
-- [ ] CHK003 Are task-description length, permitted characters, and whitespace-normalization rules
+- [x] CHK003 Are task-description length, permitted characters, and whitespace-normalization rules
   explicitly defined? [Gap, Spec §FR-001]
-- [ ] CHK004 Are requirements defined for how invalid or unsupported persisted task data is
+- [x] CHK004 Are requirements defined for how invalid or unsupported persisted task data is
   communicated to the user? [Completeness, Data Model §State Transitions]
-- [ ] CHK005 Is the intended ordering of tasks in the task list documented? [Gap, Data Model
+- [x] CHK005 Is the intended ordering of tasks in the task list documented? [Gap, Data Model
   §Task List]
 
 ## Accessibility and Interaction Clarity
 
-- [ ] CHK006 Are accessible names specified for the add, completion, and deletion controls,
+- [x] CHK006 Are accessible names specified for the add, completion, and deletion controls,
   including the affected task in deletion labels? [Completeness, Spec §FR-007; UI Contract
   §Accessibility Contract]
-- [ ] CHK007 Are keyboard interaction requirements defined for every primary task action,
+- [x] CHK007 Are keyboard interaction requirements defined for every primary task action,
   including submission, completion-state changes, and deletion? [Coverage, Spec §FR-007; UI
   Contract §Required Controls and States]
-- [ ] CHK008 Are focus destination requirements after every deletion outcome unambiguous,
+- [x] CHK008 Are focus destination requirements after every deletion outcome unambiguous,
   including deletion of the last task? [Clarity, UI Contract §Accessibility Contract]
-- [ ] CHK009 Are non-color indicators for completed tasks specified consistently with the
+- [x] CHK009 Are non-color indicators for completed tasks specified consistently with the
   observable completion-state requirement? [Consistency, Spec §FR-002; UI Contract §Required
   Controls and States]
-- [ ] CHK010 Are status-announcement contents and urgency levels defined for successful task
+- [x] CHK010 Are status-announcement contents and urgency levels defined for successful task
   actions and persistence failures? [Clarity, UI Contract §Required Controls and States]
-- [ ] CHK011 Are responsive-layout requirements quantified for the narrow and wide viewport cases
+- [x] CHK011 Are responsive-layout requirements quantified for the narrow and wide viewport cases
   required by the constitution? [Gap, UI Contract §Accessibility Contract]
 
 ## Persistence and Failure Coverage
 
-- [ ] CHK012 Are the same-browser and same-device persistence boundaries consistently specified
+- [x] CHK012 Are the same-browser and same-device persistence boundaries consistently specified
   across requirements, assumptions, and the UI contract? [Consistency, Spec §FR-005,
   §Assumptions; UI Contract §Persistence Contract]
-- [ ] CHK013 Are requirements defined for an unavailable persistence facility before a task change
+- [x] CHK013 Are requirements defined for an unavailable persistence facility before a task change
   is made, as distinct from a failure while saving a change? [Coverage, Plan §Technical Context;
   Data Model §Persistence Failure Semantics]
-- [ ] CHK014 Are requirements clear about which task-list state remains visible after a failed
+- [x] CHK014 Are requirements clear about which task-list state remains visible after a failed
   save and how the unsaved state is identified to the user? [Clarity, Spec §FR-008; Data Model
   §Persistence Failure Semantics]
-- [ ] CHK015 Are recovery requirements specified for invalid persisted data without silently
+- [x] CHK015 Are recovery requirements specified for invalid persisted data without silently
   overwriting the original data? [Coverage, Data Model §State Transitions]
-- [ ] CHK016 Is the expected behavior after the user clears browser-local data defined
+- [x] CHK016 Is the expected behavior after the user clears browser-local data defined
   consistently with the empty-state requirement? [Consistency, Spec §Edge Cases; Data Model
   §Persistence Failure Semantics]
-- [ ] CHK017 Are data-retention and privacy boundaries explicit for free-form task descriptions,
+- [x] CHK017 Are data-retention and privacy boundaries explicit for free-form task descriptions,
   including the exclusion of account and external data transfer? [Completeness, Spec
   §Assumptions; UI Contract §Persistence Contract]
 
 ## Acceptance Criteria Quality
 
-- [ ] CHK018 Is the 10-second task-visibility outcome defined with a start point, supported
+- [x] CHK018 Is the 10-second task-visibility outcome defined with a start point, supported
   browser conditions, and measurement method? [Measurability, Spec §SC-001]
-- [ ] CHK019 Are the participants, assistance criteria, and task sequence for the 90% usability
+- [x] CHK019 Are the participants, assistance criteria, and task sequence for the 90% usability
   outcome defined sufficiently to measure it consistently? [Measurability, Spec §SC-003]
-- [ ] CHK020 Is the "100%" persistence outcome bounded by defined successful-save conditions and
+- [x] CHK020 Is the "100%" persistence outcome bounded by defined successful-save conditions and
   supported browser-storage availability? [Clarity, Spec §SC-004]
-- [ ] CHK021 Are primary keyboard-action outcomes defined with enough detail to objectively assess
+- [x] CHK021 Are primary keyboard-action outcomes defined with enough detail to objectively assess
   the keyboard-only criterion? [Measurability, Spec §SC-005; UI Contract §Accessibility Contract]
 
 ## Ambiguities and Conflicts
 
-- [ ] CHK022 Are immediate deletion requirements explicitly reconciled with the stated
+- [x] CHK022 Are immediate deletion requirements explicitly reconciled with the stated
   persistence-failure behavior, so the intended user-visible result has no ambiguity? [Consistency,
   Spec §FR-004a, FR-008; Data Model §Persistence Failure Semantics]
-- [ ] CHK023 Is the target-browser scope made precise enough to determine which accessibility and
+- [x] CHK023 Is the target-browser scope made precise enough to determine which accessibility and
   browser-local persistence requirements apply? [Ambiguity, Plan §Technical Context]
 
 ## Notes
