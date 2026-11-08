@@ -9,6 +9,13 @@
 **Input**: User description: "A personal, browser-based TODO application for adding, completing,
 and deleting tasks."
 
+## Clarifications
+
+### Session 2026-11-08
+
+- Q: Should the application ask for confirmation before deleting a task? → A: No; delete
+  immediately.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Add a Task (Priority: P1)
@@ -66,7 +73,7 @@ application.
 **Acceptance Scenarios**:
 
 1. **Given** a task in the list, **When** the user deletes it, **Then** it is immediately removed
-   from the visible list.
+   from the visible list without a confirmation step.
 2. **Given** a deleted task, **When** the user reloads the application in the same browser,
    **Then** the task does not reappear.
 
@@ -90,6 +97,8 @@ application.
   complete.
 - **FR-003**: The application MUST allow a user to change a task between incomplete and complete.
 - **FR-004**: The application MUST allow a user to permanently delete an individual task.
+- **FR-004a**: The application MUST delete a task immediately when the user requests deletion and
+  MUST NOT require a confirmation step.
 - **FR-005**: The application MUST retain task descriptions, completion states, additions,
   updates, and deletions when reopened in the same browser on the same device.
 - **FR-006**: The application MUST show clear validation feedback for an invalid task description.
